@@ -17,21 +17,21 @@ namespace WFUsandoListagem
             InitializeComponent();
         }
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnsCadastrar_Click(object sender, EventArgs e)
         {
-            FormLogin form = new FormLogin();
+            FormCadastro form = new FormCadastro();
             form.ShowDialog();
-        }
-
-        private void mnsSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void mnsListar_Click(object sender, EventArgs e)
         {
             FormListagem form = new FormListagem();
             form.ShowDialog();
+        }
+
+        private void mnsSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

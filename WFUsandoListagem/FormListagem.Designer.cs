@@ -28,33 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dvgListagemUsuario = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dvgListagemUsuario).BeginInit();
+            dgvListagemUsuarios = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvListagemUsuarios).BeginInit();
             SuspendLayout();
             // 
-            // dvgListagemUsuario
+            // dgvListagemUsuarios
             // 
-            dvgListagemUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgListagemUsuario.Location = new Point(78, 43);
-            dvgListagemUsuario.Name = "dvgListagemUsuario";
-            dvgListagemUsuario.Size = new Size(492, 374);
-            dvgListagemUsuario.TabIndex = 1;
+            dgvListagemUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListagemUsuarios.Location = new Point(12, 21);
+            dgvListagemUsuarios.Name = "dgvListagemUsuarios";
+            dgvListagemUsuarios.Size = new Size(355, 225);
+            dgvListagemUsuarios.TabIndex = 0;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dvgListagemUsuario);
+            ClientSize = new Size(379, 258);
+            Controls.Add(dgvListagemUsuarios);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormListagem";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormListagem";
-            ((System.ComponentModel.ISupportInitialize)dvgListagemUsuario).EndInit();
+            Text = "Listagem de Usuários";
+            Load += FormListagem_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvListagemUsuarios).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dvgListagemUsuario;
+        private DataGridView dgvListagemUsuarios;
     }
 }

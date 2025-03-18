@@ -29,44 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            mnMenu = new MenuStrip();
+            menuStrip1 = new MenuStrip();
             mnsCadastrar = new ToolStripMenuItem();
             mnsListar = new ToolStripMenuItem();
             mnsSair = new ToolStripMenuItem();
             picImagem = new PictureBox();
-            mnMenu.SuspendLayout();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picImagem).BeginInit();
             SuspendLayout();
             // 
-            // mnMenu
+            // menuStrip1
             // 
-            mnMenu.BackColor = Color.Red;
-            mnMenu.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            mnMenu.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsListar, mnsSair });
-            mnMenu.Location = new Point(0, 0);
-            mnMenu.Name = "mnMenu";
-            mnMenu.Size = new Size(549, 24);
-            mnMenu.TabIndex = 0;
-            mnMenu.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsListar, mnsSair });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(477, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // mnsCadastrar
             // 
             mnsCadastrar.Name = "mnsCadastrar";
-            mnsCadastrar.Size = new Size(71, 20);
+            mnsCadastrar.Size = new Size(69, 20);
             mnsCadastrar.Text = "Cadastrar";
-            mnsCadastrar.Click += cadastrarToolStripMenuItem_Click;
+            mnsCadastrar.Click += mnsCadastrar_Click;
             // 
             // mnsListar
             // 
             mnsListar.Name = "mnsListar";
-            mnsListar.Size = new Size(50, 20);
+            mnsListar.Size = new Size(47, 20);
             mnsListar.Text = "Listar";
             mnsListar.Click += mnsListar_Click;
             // 
             // mnsSair
             // 
             mnsSair.Name = "mnsSair";
-            mnsSair.Size = new Size(42, 20);
+            mnsSair.Size = new Size(38, 20);
             mnsSair.Text = "Sair";
             mnsSair.Click += mnsSair_Click;
             // 
@@ -76,7 +74,7 @@
             picImagem.Image = (Image)resources.GetObject("picImagem.Image");
             picImagem.Location = new Point(0, 24);
             picImagem.Name = "picImagem";
-            picImagem.Size = new Size(549, 426);
+            picImagem.Size = new Size(477, 307);
             picImagem.SizeMode = PictureBoxSizeMode.StretchImage;
             picImagem.TabIndex = 1;
             picImagem.TabStop = false;
@@ -85,18 +83,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(549, 450);
+            ClientSize = new Size(477, 331);
             Controls.Add(picImagem);
-            Controls.Add(mnMenu);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-            MainMenuStrip = mnMenu;
+            Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormMain";
-            mnMenu.ResumeLayout(false);
-            mnMenu.PerformLayout();
+            Text = "Menu Principal";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picImagem).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -104,7 +101,7 @@
 
         #endregion
 
-        private MenuStrip mnMenu;
+        private MenuStrip menuStrip1;
         private ToolStripMenuItem mnsCadastrar;
         private ToolStripMenuItem mnsListar;
         private ToolStripMenuItem mnsSair;

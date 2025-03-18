@@ -28,105 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastro));
             txtNovoLogin = new TextBox();
-            txtConfirmarSenha = new TextBox();
             txtNovaSenha = new TextBox();
-            lblLogin = new Label();
-            lblSenha = new Label();
-            lblConfirmarSenha = new Label();
+            txtConfirmeNovaSenha = new TextBox();
             btnCadastrar = new Button();
             SuspendLayout();
             // 
             // txtNovoLogin
             // 
-            txtNovoLogin.Location = new Point(48, 60);
+            txtNovoLogin.Location = new Point(35, 33);
             txtNovoLogin.Name = "txtNovoLogin";
-            txtNovoLogin.Size = new Size(127, 23);
-            txtNovoLogin.TabIndex = 1;
-            // 
-            // txtConfirmarSenha
-            // 
-            txtConfirmarSenha.Location = new Point(48, 150);
-            txtConfirmarSenha.Name = "txtConfirmarSenha";
-            txtConfirmarSenha.PasswordChar = '*';
-            txtConfirmarSenha.Size = new Size(127, 23);
-            txtConfirmarSenha.TabIndex = 2;
+            txtNovoLogin.PlaceholderText = "Digite o novo login...";
+            txtNovoLogin.Size = new Size(277, 23);
+            txtNovoLogin.TabIndex = 0;
             // 
             // txtNovaSenha
             // 
-            txtNovaSenha.Location = new Point(48, 106);
+            txtNovaSenha.Location = new Point(35, 91);
             txtNovaSenha.Name = "txtNovaSenha";
             txtNovaSenha.PasswordChar = '*';
-            txtNovaSenha.Size = new Size(127, 23);
-            txtNovaSenha.TabIndex = 3;
+            txtNovaSenha.PlaceholderText = "Digite uma senha...";
+            txtNovaSenha.Size = new Size(277, 23);
+            txtNovaSenha.TabIndex = 1;
             // 
-            // lblLogin
+            // txtConfirmeNovaSenha
             // 
-            lblLogin.AutoSize = true;
-            lblLogin.Location = new Point(181, 63);
-            lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(37, 15);
-            lblLogin.TabIndex = 4;
-            lblLogin.Text = "Login";
-            // 
-            // lblSenha
-            // 
-            lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(181, 109);
-            lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(39, 15);
-            lblSenha.TabIndex = 5;
-            lblSenha.Text = "Senha";
-            // 
-            // lblConfirmarSenha
-            // 
-            lblConfirmarSenha.AutoSize = true;
-            lblConfirmarSenha.Location = new Point(181, 153);
-            lblConfirmarSenha.Name = "lblConfirmarSenha";
-            lblConfirmarSenha.Size = new Size(96, 15);
-            lblConfirmarSenha.TabIndex = 6;
-            lblConfirmarSenha.Text = "Confirmar Senha";
+            txtConfirmeNovaSenha.Location = new Point(35, 151);
+            txtConfirmeNovaSenha.Name = "txtConfirmeNovaSenha";
+            txtConfirmeNovaSenha.PasswordChar = '*';
+            txtConfirmeNovaSenha.PlaceholderText = "Confirme a nova senha...";
+            txtConfirmeNovaSenha.Size = new Size(277, 23);
+            txtConfirmeNovaSenha.TabIndex = 2;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.BackColor = SystemColors.ActiveCaptionText;
-            btnCadastrar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.ForeColor = SystemColors.ButtonFace;
-            btnCadastrar.Location = new Point(181, 197);
+            btnCadastrar.Image = (Image)resources.GetObject("btnCadastrar.Image");
+            btnCadastrar.Location = new Point(197, 198);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(96, 46);
-            btnCadastrar.TabIndex = 7;
+            btnCadastrar.Size = new Size(115, 44);
+            btnCadastrar.TabIndex = 3;
             btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // FormCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(405, 307);
+            ClientSize = new Size(350, 264);
             Controls.Add(btnCadastrar);
-            Controls.Add(lblConfirmarSenha);
-            Controls.Add(lblSenha);
-            Controls.Add(lblLogin);
+            Controls.Add(txtConfirmeNovaSenha);
             Controls.Add(txtNovaSenha);
-            Controls.Add(txtConfirmarSenha);
             Controls.Add(txtNovoLogin);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormCadastro";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormCadastro";
+            Text = "Cadastrar Novo Usuário";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
         private TextBox txtNovoLogin;
-        private TextBox txtConfirmarSenha;
         private TextBox txtNovaSenha;
-        private Label lblLogin;
-        private Label lblSenha;
-        private Label lblConfirmarSenha;
+        private TextBox txtConfirmeNovaSenha;
         private Button btnCadastrar;
     }
 }

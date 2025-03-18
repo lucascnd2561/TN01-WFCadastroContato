@@ -1,4 +1,4 @@
-﻿namespace WFUsandoListagem
+﻿namespace WFAcesso
 {
     partial class FormLogin
     {
@@ -28,52 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnLogar = new Button();
             txtLogin = new TextBox();
             txtSenha = new TextBox();
-            btnAcessar = new Button();
             SuspendLayout();
+            // 
+            // btnLogar
+            // 
+            btnLogar.Location = new Point(79, 133);
+            btnLogar.Name = "btnLogar";
+            btnLogar.Size = new Size(75, 23);
+            btnLogar.TabIndex = 0;
+            btnLogar.Text = "Logar";
+            btnLogar.UseVisualStyleBackColor = true;
+            btnLogar.Click += btnLogar_Click;
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(25, 40);
+            txtLogin.Location = new Point(38, 45);
             txtLogin.Name = "txtLogin";
-            txtLogin.PlaceholderText = "Digite o seu Login...";
-            txtLogin.Size = new Size(181, 23);
-            txtLogin.TabIndex = 0;
+            txtLogin.PlaceholderText = "Informe o Login...";
+            txtLogin.Size = new Size(157, 23);
+            txtLogin.TabIndex = 1;
+            txtLogin.KeyDown += txtLogin_KeyDown;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(25, 100);
+            txtSenha.Location = new Point(38, 88);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
-            txtSenha.PlaceholderText = "Digite a sua senha...";
-            txtSenha.Size = new Size(181, 23);
-            txtSenha.TabIndex = 1;
-            // 
-            // btnAcessar
-            // 
-            btnAcessar.Location = new Point(131, 157);
-            btnAcessar.Name = "btnAcessar";
-            btnAcessar.Size = new Size(75, 23);
-            btnAcessar.TabIndex = 2;
-            btnAcessar.Text = "Acessar";
-            btnAcessar.UseVisualStyleBackColor = true;
-            btnAcessar.Click += btnAcessar_Click;
+            txtSenha.PlaceholderText = "Informe a Senha...";
+            txtSenha.Size = new Size(157, 23);
+            txtSenha.TabIndex = 2;
+            txtSenha.KeyDown += txtSenha_KeyDown;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(235, 206);
-            Controls.Add(btnAcessar);
+            ClientSize = new Size(233, 205);
             Controls.Add(txtSenha);
             Controls.Add(txtLogin);
+            Controls.Add(btnLogar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Tela de Acesso";
+            Text = "Autenticação";
             Load += FormLogin_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -81,8 +83,8 @@
 
         #endregion
 
+        private Button btnLogar;
         private TextBox txtLogin;
         private TextBox txtSenha;
-        private Button btnAcessar;
     }
 }
