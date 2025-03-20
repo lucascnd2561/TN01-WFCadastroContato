@@ -26,25 +26,22 @@ namespace WFCadastroProduto
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(cbxCategoria.Text))
-            {
-                Erro("Campo Categoria não pode estar Vazia!");
-                return;
-            }
-            ////Verifica 
-                 if (string.IsNullOrEmpty(txtNomedoProduto.Text))
-            {
-                Erro("Campo Nome do produto não pode estar Vazia!");
-                return;
-            }
+            if (string.IsNullOrEmpty(mtbCodigo.Text))
+                Erro("Campo vazio");
+            if (cbxCategoria.SelectedIndex == -1)
+                Erro("Campo vazio");
+            if (string.IsNullOrEmpty(txtNomedoProduto.Text))
+                Erro("Campo vazio");
+            if (nudPreco.Value <= 0)
+                Erro("Campo vazio");
+            if (dtpDataVencimento.Value == DateTime.Today)
+                Erro("Campo vazio");
+            if (string.IsNullOrEmpty(txtObservacao.Text))
+                Erro("Campo vazio");
 
-            ////Verifica 
-            else if (string.IsNullOrEmpty(dtpDataVencimento.Text))
-            {
-                Erro("Campo Data de vencimento do produto não pode estar Vazia!");
-                return;
-            }
-            
+
+
+
         }
 
 
