@@ -67,6 +67,7 @@
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(181, 23);
             txtSenha.TabIndex = 2;
+            
             // 
             // btnAcessar
             // 

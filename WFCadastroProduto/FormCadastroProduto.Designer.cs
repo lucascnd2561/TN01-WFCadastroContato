@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroProduto));
             lblCodigo = new Label();
-            dtpDatadeVencimento = new DateTimePicker();
+            dtpDataVencimento = new DateTimePicker();
             cbxCategoria = new ComboBox();
-            txtCodigo = new TextBox();
             nudPreco = new NumericUpDown();
             txtNomedoProduto = new TextBox();
             lblCategoria = new Label();
@@ -42,43 +41,42 @@
             btnSalvar = new Button();
             txtObservacao = new TextBox();
             lblObservacao = new Label();
+            mtbCodigo = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
             SuspendLayout();
             // 
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(25, 18);
+            lblCodigo.Location = new Point(25, 9);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(46, 15);
             lblCodigo.TabIndex = 0;
             lblCodigo.Text = "Código";
             // 
-            // dtpDatadeVencimento
+            // dtpDataVencimento
             // 
-            dtpDatadeVencimento.Location = new Point(191, 146);
-            dtpDatadeVencimento.Name = "dtpDatadeVencimento";
-            dtpDatadeVencimento.Size = new Size(131, 23);
-            dtpDatadeVencimento.TabIndex = 1;
+            dtpDataVencimento.Location = new Point(191, 146);
+            dtpDataVencimento.Name = "dtpDataVencimento";
+            dtpDataVencimento.Size = new Size(131, 23);
+            dtpDataVencimento.TabIndex = 1;
             // 
             // cbxCategoria
             // 
+            cbxCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxCategoria.FormattingEnabled = true;
+            cbxCategoria.Items.AddRange(new object[] { "Açougue", "", "Hortaliças", "", "Eletrônicos", "", "Limpeza", "", "Padaria", "", "Frios", "", "Laticínios", "", "Peixaria", "", "Cesta", " Básica" });
             cbxCategoria.Location = new Point(172, 36);
             cbxCategoria.Name = "cbxCategoria";
             cbxCategoria.Size = new Size(150, 23);
             cbxCategoria.TabIndex = 2;
             // 
-            // txtCodigo
-            // 
-            txtCodigo.Location = new Point(25, 36);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(126, 23);
-            txtCodigo.TabIndex = 3;
-            // 
             // nudPreco
             // 
+            nudPreco.DecimalPlaces = 2;
+            nudPreco.Increment = new decimal(new int[] { 50, 0, 0, 0 });
             nudPreco.Location = new Point(25, 146);
+            nudPreco.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
             nudPreco.Name = "nudPreco";
             nudPreco.Size = new Size(160, 23);
             nudPreco.TabIndex = 4;
@@ -156,11 +154,21 @@
             lblObservacao.TabIndex = 13;
             lblObservacao.Text = "Observação";
             // 
+            // mtbCodigo
+            // 
+            mtbCodigo.Enabled = false;
+            mtbCodigo.Location = new Point(28, 36);
+            mtbCodigo.Mask = "000";
+            mtbCodigo.Name = "mtbCodigo";
+            mtbCodigo.Size = new Size(100, 23);
+            mtbCodigo.TabIndex = 14;
+            // 
             // FormCadastroProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(554, 456);
+            Controls.Add(mtbCodigo);
             Controls.Add(lblObservacao);
             Controls.Add(txtObservacao);
             Controls.Add(btnSalvar);
@@ -170,14 +178,14 @@
             Controls.Add(lblCategoria);
             Controls.Add(txtNomedoProduto);
             Controls.Add(nudPreco);
-            Controls.Add(txtCodigo);
             Controls.Add(cbxCategoria);
-            Controls.Add(dtpDatadeVencimento);
+            Controls.Add(dtpDataVencimento);
             Controls.Add(lblCodigo);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormCadastroProduto";
             Text = "FormCadastroProduto";
+            Load += FormCadastroProduto_Load;
             ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -186,9 +194,8 @@
         #endregion
 
         private Label lblCodigo;
-        private DateTimePicker dtpDatadeVencimento;
+        private DateTimePicker dtpDataVencimento;
         private ComboBox cbxCategoria;
-        private TextBox txtCodigo;
         private NumericUpDown nudPreco;
         private TextBox txtNomedoProduto;
         private Label lblCategoria;
@@ -198,5 +205,6 @@
         private Button btnSalvar;
         private TextBox txtObservacao;
         private Label lblObservacao;
+        private MaskedTextBox mtbCodigo;
     }
 }

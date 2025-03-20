@@ -15,5 +15,13 @@ namespace WFCadastroProduto
 
         public static
             List<Usuario> ListaUsuarios = new List<Usuario>();
+
+        public Usuario(int codigo, string? login, string? senha, DateTime dataCadastro)
+        {
+            Codigo = codigo;
+            Login = login;
+            Senha = senha;
+            DataCadastro = dataCadastro;
+        }
     }
 }

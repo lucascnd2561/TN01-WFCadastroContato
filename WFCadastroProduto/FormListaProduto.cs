@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WFCadastroProduto
 {
-    public partial class FormListaProduto: Form
+    public partial class FormListaProduto : Form
     {
         public FormListaProduto()
         {
             InitializeComponent();
+        }
+
+        private void dgvListaProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvListaProduto.DataSource = Produto.Listaprodutos;
         }
     }
 }

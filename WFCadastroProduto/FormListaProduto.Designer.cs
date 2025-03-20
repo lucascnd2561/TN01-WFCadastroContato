@@ -40,6 +40,7 @@
             dgvListaProduto.Name = "dgvListaProduto";
             dgvListaProduto.Size = new Size(446, 324);
             dgvListaProduto.TabIndex = 0;
+            dgvListaProduto.CellContentClick += dgvListaProduto_CellContentClick;
             // 
             // FormListaProduto
             // 

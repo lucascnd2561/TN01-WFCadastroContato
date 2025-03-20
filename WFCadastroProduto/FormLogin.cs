@@ -28,36 +28,40 @@ namespace WFCadastroProduto
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtLogin.Text))
             {
-                Erro("O Campo Login não pode esta vazio!");
-                return;
-
-            }
-            if (string.IsNullOrEmpty(txtSenha.Text))
-            {
-                Erro("O Campo Senha não pode esta vazio!");
-
-            }
-
-            foreach (Usuario u in Usuario.ListaUsuarios)
-            {
-                if (u.Login == txtLogin.Text)
+                if (string.IsNullOrEmpty(txtLogin.Text))
                 {
-                    if (u.Senha == txtSenha.Text)
-                    {
-                        FormMenu form = new FormMenu();
-                        form.ShowDialog();
-
-                        txtLogin.Clear();
-                        txtSenha.Clear();
-
-
-                        return;
-
-                    }
+                    Erro("O Campo Login não pode estar vazio!");
+                    return;
                 }
+                if (string.IsNullOrEmpty(txtSenha.Text))
+                {
+                    Erro("O Campo Senha não pode estar vazio!");
+                    return;
+                }
+
+                foreach (Usuario u in Usuario.ListaUsuarios)
+                {
+                    if (u.Login == txtLogin.Text)
+                    {
+                        if (u.Senha == txtSenha.Text)
+                        {
+                            FormMenu form = new FormMenu();
+                            form.ShowDialog();
+
+                            this.txtLogin.Clear();
+                            this.txtSenha.Clear();
+
+                            return;
+                        }
+                    }
+
+                }
+
+                Erro("Usuario e Senha não se encontra na Base!");
+                return;
             }
         }
     }
 }
+              
